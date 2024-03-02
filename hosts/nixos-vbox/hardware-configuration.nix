@@ -7,7 +7,7 @@
   imports = [ ];
 
   nixpkgs.config.allowUnfree = true;
-  # virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enable = true;
   # virtualisation.virtualbox.host.enableExtensionPack = true;
   # users.extraGroups.vboxusers.members = [ "kedde" ];
 
@@ -17,7 +17,7 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/6b9b4369-56a4-480c-97ec-dbb489110e2b";
+    { device = "/dev/disk/by-label/nixos";
       fsType = "ext4";
     };
 
